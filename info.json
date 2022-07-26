@@ -1,0 +1,9 @@
+{
+  "name": "queue-to-front-button",
+  "version": "0.1.0",
+  "title": "Queue to Front (Alt+ Mouse Button)",
+  "author": "tjson",
+  "factorio_version": "1.1",
+  "dependencies": ["base >= 1.1"],
+  "description": "This mod makes it possible to queue a recipe to the front of the queue when holding a key (default Alt button)."
+}
