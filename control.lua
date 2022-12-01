@@ -1,5 +1,5 @@
 script.on_event('front-craft', function(event)
-    if event.selected_prototype.base_type == "recipe" then
+    if event.selected_prototype and event.selected_prototype.base_type == "recipe" then
         local plr = game.players[event.player_index]
         global.queue_to_front = true
         plr.begin_crafting{count=1, recipe=event.selected_prototype.name, silent=true}
@@ -7,7 +7,7 @@ script.on_event('front-craft', function(event)
 end)
 
 script.on_event('front-craft-5', function(event)
-    if event.selected_prototype.base_type == "recipe" then
+    if event.selected_prototype and event.selected_prototype.base_type == "recipe" then
         local plr = game.players[event.player_index]
         global.queue_to_front = true
         plr.begin_crafting{count=5, recipe=event.selected_prototype.name, silent=true}
@@ -15,7 +15,7 @@ script.on_event('front-craft-5', function(event)
 end)
 
 script.on_event('front-craft-all', function(event)
-    if event.selected_prototype.base_type == "recipe" then
+    if event.selected_prototype and event.selected_prototype.base_type == "recipe" then
         local plr = game.players[event.player_index]
         local recipe = event.selected_prototype.name
         local max = plr.get_craftable_count(recipe)
